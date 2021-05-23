@@ -1,0 +1,607 @@
+@import url(font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600");
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  width: 100%;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*--------NAV BEGINS--------*/
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #303030;
+  width: 100%;
+  z-index: 10;
+  animation: nav-load 300ms ease-in;
+  transform: translateY(0);
+}
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.nav .logo {
+  margin-left: 190px;
+  margin-top: 15px;
+}
+
+.nav .list-items {
+  display: flex;
+  margin-right: 190px;
+}
+nav ul li {
+  overflow: hidden;
+}
+
+.list-items a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: block;
+  padding: 25px;
+  text-align: center;
+  animation: li-load 300ms ease-in 300ms forwards;
+  transform: scale(0);
+}
+@keyframes li-load {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.list-items a:hover {
+  color: #03a9f4;
+}
+
+/*--------NAV ENDS--------*/
+
+/*--------HOME SECTION BEGINS--------*/
+
+.home-section {
+  height: 130vh;
+  width: 100%;
+  background: url(../images/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-section > .inner {
+  overflow: hidden;
+}
+
+.home-section > .inner h1 {
+  font-size: 6rem;
+  text-align: center;
+  font-weight: 400;
+  color: whitesmoke;
+  animation: button-grow 1.5s ease-in 300ms forwards;
+  transform: scale(0);
+}
+
+@keyframes header-delay {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.home-section > .inner h3 {
+  font-size: 3rem;
+  max-width: 490px;
+  font-weight: 400;
+  font-style: italic;
+  color: #03a9f4;
+  text-align: center;
+  animation: button-grow 1.5s ease-in 300ms forwards;
+  transform: scale(0);
+  margin-top: 0;
+}
+.home-section > .inner button {
+  padding: 10px 0px;
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: #303030;
+  border-radius: 5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  animation: button-grow 1.5s ease-in 300ms forwards;
+  transform: scale(0);
+  margin-top: 10px;
+}
+
+.home-section > .inner button p {
+  font-family: sans-serif;
+  font-style: oblique;
+  text-transform: capitalize;
+}
+.inner button p:hover {
+  color: #e94242;
+}
+
+@keyframes button-grow {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.home-section > .inner button a {
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+/*--------HOME SECTION ENDS--------*/
+
+/*--------PROJECT SECTION BEGINS--------*/
+
+.projects {
+  width: 100%;
+  background-color: thistle;
+}
+
+.project-heading {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  text-decoration: underline;
+  padding: 80px 0;
+  margin-bottom: 30px;
+  font-family: 'Brawler', serif;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+
+.card {
+  height: 400px;
+  margin: 20px 25px;
+}
+
+.card .card-image {
+  width: 100%;
+  height: 80%;
+}
+
+.card-title {
+  background-color: rgb(25, 61, 92);
+  color: whitesmoke;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.card-title:hover {
+  color: gold;
+  background-color: #e94242;
+}
+
+
+/*--------PROJECT SECTION ENDS--------*/
+
+/**********FORM BEGINS*****************/
+
+/* reset */
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm fieldset,
+#fs-frm optgroup,
+#fs-frm label,
+#fs-frm #card-element:disabled {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+#fs-frm label,
+#fs-frm legend,
+#fs-frm ::placeholder {
+  font-size: 0.825rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.2rem;
+  display: flex;
+  align-items: baseline;
+}
+
+/* border, padding, margin, width */
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm #card-element {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.75em 1rem;
+  margin-bottom: 1.5rem;
+  resize: vertical;
+  width: 97%;
+}
+#fs-frm input:focus,
+#fs-frm select:focus,
+#fs-frm textarea:focus {
+  background-color: white;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gray;
+  outline-offset: -1px;
+}
+#fs-frm [type="text"],
+#fs-frm [type="email"] {
+  width: 97%;
+}
+#fs-frm [type="button"],
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  background-color: #116199;
+  color: white;
+}
+#fs-frm [type="button"]:focus,
+#fs-frm [type="submit"]:focus,
+#fs-frm [type="reset"]:focus {
+  outline: none;
+}
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  margin-bottom: 0;
+}
+#fs-frm select {
+  text-transform: none;
+}
+
+#fs-frm [type="checkbox"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+  display: inline-block;
+  width: auto;
+  margin: 0 0.5em 0 0 !important;
+}
+
+#fs-frm [type="radio"] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  appearance: radio;
+}
+
+/* address, locale */
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  display: inline;
+}
+#fs-frm fieldset.locale input[name="city"] {
+  width: 52%;
+}
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  width: 20%;
+}
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"] {
+  margin-right: 3%;
+}
+
+#status {
+  width: 90%;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.success {
+  color: green;
+  animation: status 4s ease forwards;
+  margin-left: 35px;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.error {
+  color: red;
+  animation: status 4s ease forwards;
+  margin-left: 35px;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+label {
+  color: black;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/**********FORM ENdS******************/
+
+/********Contacts begins********/
+.contacts {
+  width: 100%;
+  height: 120vh;
+  overflow-y: hidden;
+  background-color: #f9f9f9;
+}
+
+form {
+  width: 95%;
+  margin: 25px 20px;
+}
+.contacts h3 {
+  font-weight: 400;
+  font-size: 40px;
+  padding: 35px 0 20px 0;
+  color: black;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+.submit::after {
+  color: aquamarine;
+}
+
+.about-me {
+  background-color: #e6e6e6;
+  padding: 30px;
+}
+
+.about-me h3 {
+  font-weight: 400;
+  font-size: 40px;
+  padding: 35px 0 20px 0;
+  color: black;
+}
+.about-me p {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px 20px 0;
+  margin-left: 20px;
+}
+
+.icons-a {
+  padding-right: 30px;
+  color: #f93242;
+  transition: all 500ms ease-in-out;
+}
+.icons-a:hover {
+  color: #03a9f4;
+  font-size: 20px;
+}
+
+/********Contacts ends********/
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  height: 100vh;
+  width: 100%;
+}
+.about-image {
+  width: 100%;
+  margin-top: 65px;
+}
+.about-image img {
+  width: 60%;
+  height: 500px;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  border: 1px solid ;
+}
+.alternative {
+  font-size: 45px;
+  color: black;
+}
+.contacts > .alt {
+  margin-left: 20px;
+}
+/*Credits*/
+
+.credits {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+}
+
+@media (width: 1024px) {
+  .home-section {
+    height: 100vh;
+  }
+  .home-section > .inner h1 {
+    font-size: 6.5rem;
+  }
+  .home-section > .inner h3 {
+    font-size: 3rem;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .home-section > .inner button {
+   padding: 5px;
+   height: 55px;
+   width: 45%;
+   font-size: 30px;
+   margin-top: 40px;
+  }
+  .about {
+    height: 50vh;
+  }
+  .contacts {
+    height: 80vh;
+  }
+  .contacts > h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+ 
+  .alternative {
+    font-size: 80px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+  .icons-a {
+    font-size: 50px;
+    padding: 30px;
+  }
+  .icons-a:hover {
+    font-size: 50px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .nav {
+    position: relative; 
+  }
+  .nav .list-items {
+    display: none;
+  }
+  .nav-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+  .home-section {
+    height: 100vh;
+  }
+  .home-section > .inner h1 {
+    font-size: 4.5rem;
+    margin-top: 20px;
+  }
+  .home-section > .inner h3 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  .home-section > .inner button {
+   padding: 5px;
+   width: 45%;
+   margin-top: 20px;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 130vh;
+  }
+  .about-me h3 {
+    padding: 20px 0 15px 0;
+  }
+  .about-image {
+    margin: 30px auto;
+  }
+  .about .about-image img {
+    display: block;
+    margin: auto;
+    width: 80%;
+  }
+  .projects {
+    overflow: hidden;
+  }
+  .project-heading {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -45px;
+    margin-bottom: -30px;
+    font-size: 40px;
+  }
+  .cards {
+    margin-bottom: -70px;
+  }
+  .card {
+    margin: 10px 35px;
+  }
+  form {
+    width: 90%;
+  }
+  input {
+    width: 80%;
+    border: 2px solid black;
+  }
+  .alternative {
+    margin-top: 35px;
+    margin-bottom: 45px;
+  }
+  .contacts {
+    height: 100vh;
+  }
+  .contacts h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
